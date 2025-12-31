@@ -1,0 +1,43 @@
+:root {
+      /* Base colors */
+  --white: #ffffff;
+  --black: #050608;
+  --blue: #264063;
+  --primary: #512d33;
+  --secondary: #ff4a13;
+  --accent: #a79519;
+    
+    
+      /* Background gradient colors */
+  --grad-1: #512d33;
+  --grad-2: #264063;
+  --grad-3: #a79519;
+
+  /* Surfaces */
+  --surface: rgba(255, 255, 255, 0.12);
+  --surface-border: rgba(255, 255, 255, 0.25);
+  --text-main: #f5f7fb;
+  --text-muted: #c3c7d5;
+
+  /* Navbar */
+  --navbar-bg: rgba(12, 18, 35, 0.45);
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+/* Dark mode overrides */
+.dark {
+  --grad-1: #050608;
+  --grad-2: #151822;
+  --grad-3: #38314a;
+
+  --surface: rgba(15, 20, 40, 0.7);
+  --surface-border: rgba(255, 255, 255, 0.12);
+  --text-main: #f7f7ff;
+  --text-muted: #9ca3c5;
+  --navbar-bg: rgba(5, 7, 17, 0.85);
+}

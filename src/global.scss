@@ -1,0 +1,131 @@
+@use './variables' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;  // only hide horizontal scroll
+  overflow-y: auto;    // allow vertical scroll
+  background: linear-gradient(180deg, #292829, #2d2d3a);
+}
+
+.rain {
+  position: fixed;
+  // position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1000;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  .drop {
+    position: absolute;
+    color: #00f81569;
+    font-weight: 500;
+    animation: fall 3s linear infinite;
+  }
+
+  @keyframes fall {
+    from {
+      transform: translateY(0);
+      // opacity: 0.6;
+    }
+
+    to {
+      transform: translateY(110vh);
+      // opacity: 0.2;
+    }
+  }
+}
+
+// Animations
+@mixin fade($duration: 1s, $easing: ease-in-out) {
+  opacity: 0;
+  transition: opacity $duration $easing;
+
+  &.visible {
+    opacity: 1;
+  }
+}
+
+.fade-section {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  width: 100%;
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-left {
+  transform: translateX(-50px);
+}
+
+.fade-right {
+  transform: translateX(50px);
+}
+
+@mixin fade-bg($from: #111111, $to: #111, $duration: 1.5s) {
+  background-color: $from;
+  // opacity: 0;
+  transition: opacity $duration ease, background-color $duration ease;
+
+  &.visible {
+    // opacity: 1;
+    background-color: $to;
+  }
+}
+@mixin fade-gradient($duration: 1.5s) {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  opacity: 0;
+  transition: opacity $duration ease-in-out;
+
+  &.visible {
+    opacity: 1;
+  }
+}
+
+.fade-gradient-section {
+  @include fade-gradient(2s);
+}
+
+@mixin fade-scale($duration: 1s) {
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity $duration ease, transform $duration ease;
+
+  &.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-scale-section {
+  @include fade-scale(1s);
+}
+
+@keyframes fadeLoop {
+  from {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-loop {
+  animation: fadeLoop 6s infinite alternate;
+}

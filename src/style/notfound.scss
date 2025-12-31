@@ -1,0 +1,40 @@
+@use '../variables';
+
+.notfound{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem auto; // center horizontally
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 40%;
+
+    h1{
+        font-size: 5rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+
+    .btn-box{
+        display: flex;
+        justify-content: center;align-items: center;
+        margin-top: 2rem;
+
+        .back-home-btn{
+            padding: 1rem 3rem;
+            background: var(--surface);
+            border-radius: 0.5rem;
+            font-size: 1.2rem;
+            color: var(--white);
+
+            &:hover{
+                color: var(--accent);
+            }
+        }
+    }
+
+    @media (max-width: 640px){
+        width: 90%;
+    }
+}

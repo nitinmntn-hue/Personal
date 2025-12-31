@@ -1,0 +1,13 @@
+@use '../../variables';
+
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.5rem;
+
+    @media (max-width: 640px){
+
+    }
+}

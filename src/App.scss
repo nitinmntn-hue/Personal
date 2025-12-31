@@ -1,0 +1,57 @@
+@use './variables';
+#root, body, html {
+  height: 100%;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; // full viewport height
+}
+
+.main-content {
+  flex: 1; // pushes footer down
+  // position: absolute;
+}
+
+
+.main-box {
+  position: relative; // don’t lock it absolutely
+  width: 100%;
+  min-height: 100%; // allow growth
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; // spacing between sections
+
+
+
+  .content-box {
+    max-width: 80%;
+    margin: 1rem auto; // center horizontally
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: 8px;
+
+    .heading {
+      font-weight: 700;
+      font-size: 3rem;
+      padding-bottom: 1rem;
+      color: var(--secondary);
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    .description {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--white);
+    }
+  }
+
+  @media (max-width:680px) {
+    .content-box{
+      max-width: 90%;
+    }
+  }
+}
