@@ -31,7 +31,7 @@ const Navbar = () => {
     <header className="navbar">
       <div className="navbar-inner">
         <Link to="/" className="navbar-logo" onClick={closeMenu}>
-          <span className="logo-mark">NM</span>
+          <img className="logo-mark" src='https://avatars.githubusercontent.com/u/243802853?s=400&u=2eaf4d028991ac26f4b381cc59449261c55ea45e&v=4' />
           <span className="logo-text">Nitin Meena</span>
         </Link>
 
