@@ -87,11 +87,29 @@ const Contact = () => {
           <FadeIn>
             <div className="contact-right">
               <div className="contact-box">
-                <h2 className="heading2">Contact Info</h2>
-                <Link to="#">Youtube</Link>
-                <Link to="#">Twitter</Link>
-                <Link to="#">Instagram</Link>
-                <Link to="#">LinkedIn</Link>
+                <h2 className="heading2">Get in touch</h2>
+                <p className='left-heading'>
+                  <h5>Email to me</h5>
+                  <a href='mailto:nnitinmn@gmail.com' className="description">
+                    nnitinmn@gmail.com
+                  </a>
+                </p>
+                <p className='left-heading'>
+                  <h5>Email to me</h5>
+                  <a href='mailto:nnitinmn@gmail.com' className="description">
+                    nnitinmn@gmail.com
+                  </a>
+                </p>
+                <p className='left-heading'>
+                  <h5>Connect to me</h5>
+                  <Link to="#">Youtube</Link>
+                  <Link to="#">Twitter</Link>
+                  <Link to="#">Instagram</Link>
+                  <Link to="#">LinkedIn</Link>
+                </p>
+
+
+
               </div>
             </div>
           </FadeIn>

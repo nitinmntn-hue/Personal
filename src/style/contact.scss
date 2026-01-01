@@ -64,12 +64,35 @@
     .contact-right {
         width: 100%;
         display: flex;
+
+        .heading2 {
+            font-size: 2.3rem;
+        }
+
+        .contact-box {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .left-heading {
+                font-weight: 700;
+                font-size: 1.5rem;
+
+                h5 {
+                    font-size: 1.5rem;
+                }
+
+                a {
+                    font-size: 1.3rem;
+                }
+            }
+        }
     }
 
     @media (max-width:680px) {
         width: 100%;
+        gap: 5rem;
         grid-template-columns: repeat(1, 1fr);
-
 
         .contact-left {
             width: 100%;
