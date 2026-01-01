@@ -13,18 +13,6 @@ const TechStack = () => {
                 </div>
             </FadeIn>
 
-            <FadeIn>
-                <nav className="navbar-links">
-                    <NavLink to="/" end>
-                        Home
-                    </NavLink>
-                    <NavLink to="/about">About</NavLink>
-                    <NavLink to="/contact">Contact</NavLink>
-                    <NavLink to="/projects">Projects</NavLink>
-                    <NavLink to="/skills">Skills</NavLink>
-                    <NavLink to="/contact">Contact</NavLink>
-                </nav>
-            </FadeIn>
         </main>
     )
 }
